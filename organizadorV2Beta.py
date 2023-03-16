@@ -48,7 +48,7 @@ for filename in os.listdir(folder_test):
         if extension.lower() in [".jpg", ".jpeg", ".png", ".gif"]:
             try:
                 picture = Image.open(file_path)
-                picture.save(os.path.join(dir_path, filename), optimize = True, quality = 5)
+                picture.save(os.path.join(dir_path, filename), optimize = True, quality = 1)
                 os.remove(file_path)
             except Exception as e:
                 print(f"Error: Could not open {file_path}: {e}")
