@@ -4,6 +4,7 @@ from PIL import Image
 def path_format(path):
     return path.replace('\\', '/')
 
+#Asignar la ruta de la carpeta con los archivos a acomodar 
 folder_test = path_format(r"D:\FMelox\Documents\archivos escuela y mas")
 organized_files = os.path.join(folder_test, 'FilesOrganizados')
 
@@ -14,6 +15,8 @@ extensions = {
     ".gif": "Imagenes",
     ".mp3": "Audios",
     ".flac": "Audios",
+    ".wav" : "Audios",
+    ".m4a" : "Audios",
     ".mp4": "Videos",
     ".mov": "Videos",
     ".mkv": "Videos",
