@@ -5,7 +5,7 @@ def path_format(path):
     return path.replace('\\', '/')
 
 #Asignar la ruta de la carpeta con los archivos a acomodar 
-folder_test = path_format(r"D:\FMelox\Documents\archivos escuela y mas")
+folder_test = path_format(r"C:\Users\UzielM\Documents\pruebaFoto")
 organized_files = os.path.join(folder_test, 'FilesOrganizados')
 
 extensions = {
@@ -48,7 +48,7 @@ for filename in os.listdir(folder_test):
         if extension.lower() in [".jpg", ".jpeg", ".png", ".gif"]:
             try:
                 picture = Image.open(file_path)
-                picture.save(os.path.join(dir_path, filename))
+                picture.save(os.path.join(dir_path, filename), optimized = True, quality = 92)
                 os.remove(file_path)
             except Exception as e:
                 print(f"Error: Could not open {file_path}: {e}")
